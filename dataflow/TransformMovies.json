@@ -9,7 +9,7 @@
 						"referenceName": "MoviesDB",
 						"type": "DatasetReference"
 					},
-					"name": "MoviesDB"
+					"name": "MoviesDBStream"
 				}
 			],
 			"sinks": [
@@ -40,8 +40,8 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> MoviesDB",
-				"MoviesDB filter(toInteger(year) >= 1910 && toInteger(year) <= 2000 && rlike(genres, 'Comedy')) ~> FilterYears",
+				"     ignoreNoFilesFound: false) ~> MoviesDBStream",
+				"MoviesDBStream filter(toInteger(year) >= 1910 && toInteger(year) <= 2000 && rlike(genres, 'Comedy')) ~> FilterYears",
 				"FilterYears aggregate(groupBy(year),",
 				"     AverageComedyRating = avg(toInteger(Rating))) ~> AggregateComedyRatings",
 				"AggregateComedyRatings sink(allowSchemaDrift: true,",
