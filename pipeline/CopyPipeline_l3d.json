@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_l3d",
+				"name": "Copy_Data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
