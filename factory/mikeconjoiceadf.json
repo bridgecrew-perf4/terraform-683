@@ -1,0 +1,9 @@
+{
+	"name": "mikeconjoiceadf",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "74150c90-ab20-41ce-a355-d692a92d6fce",
+		"tenantId": "44d26d13-f150-497b-a5ec-ec4d0d8b5dde"
+	}
+}
